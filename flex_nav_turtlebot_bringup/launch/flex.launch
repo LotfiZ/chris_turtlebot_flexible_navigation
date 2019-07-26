@@ -21,12 +21,14 @@
       <rosparam file="$(find flex_nav_turtlebot_bringup)/param/global_costmap_params.yaml" command="load" />
       <rosparam file="$(arg custom_param_file)" command="load" />
       <param name="planner" value="SBPLLatticePlanner" />
-      <param name="SBPLLatticePlanner/primitive_filename" value="$(find chris_turtlebot_navigation)/mprim/turtlebot_050.mprim" />
-      <param name="SBPLLatticePlanner/environment_type"   value="XYThetaLattice" />
-      <param name="SBPLLatticePlanner/planner_type"       value="ARAPlanner" />
-      <param name="SBPLLatticePlanner/initial_epsilon"    value="3.0" />
-      <param name="SBPLLatticePlanner/allocated_time"     value="9.9" />
-      <param name="SBPLLatticePlanner/forward_search"     value="false" />
+      <param name="SBPLLatticePlanner/primitive_filename"           value="$(find chris_turtlebot_navigation)/mprim/turtlebot_050.mprim" />
+      <param name="SBPLLatticePlanner/environment_type"             value="XYThetaLattice" />
+      <param name="SBPLLatticePlanner/planner_type"                 value="ARAPlanner" />
+      <param name="SBPLLatticePlanner/initial_epsilon"              value="3.0" />
+      <param name="SBPLLatticePlanner/allocated_time"               value="9.9" />
+      <param name="SBPLLatticePlanner/forward_search"               value="false" />
+      <param name="SBPLLatticePlanner/nominalvel_mpersecs"          value="1.0" />
+      <param name="SBPLLatticePlanner/timetoturn45degsinplace_secs" value="1.0" />
       <remap from="odom" to="$(arg odom_topic)"/>
       <remap from="scan" to="$(arg scan_topic)"/>
 
