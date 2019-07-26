@@ -1,7 +1,7 @@
 DWAPlannerROS:
 
 # Robot Configuration Parameters - Turtlebot
-  max_vel_x:  0.35 # slower than max for now
+  max_vel_x:  0.5 # slower than max for now
   min_vel_x: -0.1  # Negative to allow reverse
 
   max_vel_y: 0.0  # diff drive robot

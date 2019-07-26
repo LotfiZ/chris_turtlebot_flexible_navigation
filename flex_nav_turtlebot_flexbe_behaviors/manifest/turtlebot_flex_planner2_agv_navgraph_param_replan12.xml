@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="Turtlebot Flex Planner2_AGV_Navgraph_Param_replan12">
+
+	<executable package_path="flex_nav_turtlebot_flexbe_behaviors.turtlebot_flex_planner2_agv_navgraph_param_replan12_sm" class="TurtlebotFlexPlanner2_AGV_Navgraph_Param_replan12SM" />
+	<tagstring>Flex_Nav</tagstring>
+	<author>Josh Cohen</author>
+	<date>Mon Jan 09 2017</date>
+	<description>
+		Uses Flexible Navigation to control the Turtlebot robot
+	</description>
+
+
+	<!-- Contained Behaviors -->
+	<contains name="AGV Recovery Behaviour1" />
+
+	<!-- Available Parameters -->
+
+</behavior>

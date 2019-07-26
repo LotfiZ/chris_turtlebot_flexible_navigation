@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="Special_behaviour">
+
+	<executable package_path="flex_nav_turtlebot_flexbe_behaviors.special_behaviour_sm" class="Special_behaviourSM" />
+	<tagstring>Flex_Nav</tagstring>
+	<author>Deepanshu</author>
+	<date>Mon Jun 17 2019</date>
+	<description>
+		Implements special behaviour and switches between DWA and TEB
+	</description>
+
+
+	<!-- Contained Behaviors -->
+	<contains name="AGV Flex Planner" />
+
+	<!-- Available Parameters -->
+
+</behavior>

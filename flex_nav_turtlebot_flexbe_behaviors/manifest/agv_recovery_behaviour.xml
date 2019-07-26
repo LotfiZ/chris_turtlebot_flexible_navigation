@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="AGV Recovery Behaviour">
+
+	<executable package_path="flex_nav_turtlebot_flexbe_behaviors.agv_recovery_behaviour_sm" class="AGVRecoveryBehaviourSM" />
+	<tagstring>recovery</tagstring>
+	<author>Justin Willis</author>
+	<date>Mon Jan 09 2017</date>
+	<description>
+		Stops the robot, backs up, and clears the cost map.  Operator can bypass steps in lower autonomy levels.
+	</description>
+
+
+	<!-- Contained Behaviors -->
+
+	<!-- Available Parameters -->
+
+</behavior>

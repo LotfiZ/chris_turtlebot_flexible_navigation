@@ -36,7 +36,7 @@
 
     </node>
 
-    <!-- Path Follower Control -->
+    <!-- Path Follower Control For DWA -->
     <node pkg="flex_nav_controllers" type="flex_nav_controllers_follow_path_node" respawn="false" name="low_level_planner" output="screen">
       <param name="controller_frequency" value="10.0" />
       <rosparam file="$(find flex_nav_turtlebot_bringup)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
@@ -54,6 +54,23 @@
       <param name="DWAPlannerROS/global_frame_id"   value="$(arg odom_frame_id)"/>
     </node>
 
+    <!-- Path Follower Control For TEB -->
+    <node pkg="flex_nav_controllers" type="flex_nav_controllers_follow_path_node" respawn="false" name="low_level_planner1" output="screen">
+      <param name="controller_frequency" value="10.0" />
+      <rosparam file="$(find flex_nav_turtlebot_bringup)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+      <rosparam file="$(find flex_nav_turtlebot_bringup)/param/local_costmap_params.yaml" command="load" />
+      <rosparam file="$(find flex_nav_turtlebot_bringup)/param/teb_local_planner_params.yaml" command="load" />
+      <rosparam file="$(arg custom_param_file)" command="load" />
+      <param name="planner" value="teb_local_planner/TebLocalPlannerROS"/>
+      <remap from="odom" to="$(arg odom_topic)"/>
+      <remap from="scan" to="$(arg scan_topic)"/>
+      <remap from="cmd_vel" to="stamped_cmd_vel_mux/input/navi"/>
+
+      <!-- reset frame_id parameters using user input data -->
+      <param name="local_costmap/global_frame"      value="$(arg odom_frame_id)"/>
+      <param name="local_costmap/robot_base_frame"  value="$(arg base_frame_id)"/>
+      <param name="DWAPlannerROS/global_frame_id"   value="$(arg odom_frame_id)"/>
+    </node>
   </group>
 
 </launch>
